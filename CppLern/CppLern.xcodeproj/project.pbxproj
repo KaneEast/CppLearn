@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CEA2293424726B1900811032 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA2293324726B1900811032 /* main.cpp */; };
+		CEA2293424726B1900811032 /* hello.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA2293324726B1900811032 /* hello.cpp */; };
+		CEA2293D2472797000811032 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = CEA2293C2472797000811032 /* Makefile */; };
+		CEA2294024727D2000811032 /* lamda_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA2293E24727D2000811032 /* lamda_test.cpp */; };
+		CEA2294324727FF300811032 /* standardInput_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA2294224727FF300811032 /* standardInput_test.cpp */; };
+		CEA229452472829400811032 /* input_redirect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA229442472829400811032 /* input_redirect.cpp */; };
+		CEA229492472904A00811032 /* recursion_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA229482472904A00811032 /* recursion_test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +29,15 @@
 
 /* Begin PBXFileReference section */
 		CEA2293024726B1900811032 /* CppLern */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CppLern; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEA2293324726B1900811032 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CEA2293324726B1900811032 /* hello.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello.cpp; sourceTree = "<group>"; };
+		CEA2293A24726D1D00811032 /* hellocpp.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = hellocpp.md; sourceTree = "<group>"; };
+		CEA2293B24726F9A00811032 /* all.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = all.h; sourceTree = "<group>"; };
+		CEA2293C2472797000811032 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		CEA2293E24727D2000811032 /* lamda_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lamda_test.cpp; sourceTree = "<group>"; };
+		CEA2294224727FF300811032 /* standardInput_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = standardInput_test.cpp; sourceTree = "<group>"; };
+		CEA229442472829400811032 /* input_redirect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = input_redirect.cpp; sourceTree = "<group>"; };
+		CEA22947247287F200811032 /* bodymass.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bodymass.txt; sourceTree = "<group>"; };
+		CEA229482472904A00811032 /* recursion_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = recursion_test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +70,25 @@
 		CEA2293224726B1900811032 /* CppLern */ = {
 			isa = PBXGroup;
 			children = (
-				CEA2293324726B1900811032 /* main.cpp */,
+				CEA22947247287F200811032 /* bodymass.txt */,
+				CEA2294124727DC000811032 /* Tests */,
+				CEA2293324726B1900811032 /* hello.cpp */,
+				CEA2293A24726D1D00811032 /* hellocpp.md */,
+				CEA2293B24726F9A00811032 /* all.h */,
+				CEA2293C2472797000811032 /* Makefile */,
 			);
 			path = CppLern;
+			sourceTree = "<group>";
+		};
+		CEA2294124727DC000811032 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA2293E24727D2000811032 /* lamda_test.cpp */,
+				CEA2294224727FF300811032 /* standardInput_test.cpp */,
+				CEA229442472829400811032 /* input_redirect.cpp */,
+				CEA229482472904A00811032 /* recursion_test.cpp */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA2293424726B1900811032 /* main.cpp in Sources */,
+				CEA229492472904A00811032 /* recursion_test.cpp in Sources */,
+				CEA229452472829400811032 /* input_redirect.cpp in Sources */,
+				CEA2293D2472797000811032 /* Makefile in Sources */,
+				CEA2293424726B1900811032 /* hello.cpp in Sources */,
+				CEA2294024727D2000811032 /* lamda_test.cpp in Sources */,
+				CEA2294324727FF300811032 /* standardInput_test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +272,8 @@
 		CEA2293824726B1900811032 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -246,6 +282,8 @@
 		CEA2293924726B1900811032 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
