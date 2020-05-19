@@ -32,5 +32,8 @@ int main(int argc, const char * argv[]) {
     input_redirect();
 #endif
     
+    
+    cout << __cplusplus << endl;
+    
     return 0;
 }
