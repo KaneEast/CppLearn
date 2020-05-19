@@ -256,5 +256,42 @@ void std_algorithm()
     
     
     
+    std::vector<int> aaaa = {1,2,3,4,5} ;
+
+    std::vector<int> bbbb(5) ;
+    std::transform( std::begin(aaaa), std::end(aaaa), std::begin(bbbb),
+        [](auto x){ return 2*x ; } ) ;
+    // bbbbは{2,4,6,8,10}
+    
+    
+    // replace(first, last, old_value, new_value)はイテレーター[first,last)の範囲のイテレーターが指す要素の値が
+    // old_valueに等しいものをnew_valueに置換する関数だ。
+    std::vector<int> vReplace = {1,2,3,3,4,5,3,4,5} ;
+    std::replace( std::begin(vReplace), std::end(vReplace), 3, 0 ) ;
+    // aは{1,2,0,0,4,5,0,4,5}
+    
+    
+    std::vector<int> vFill = {1,2,3,4,5} ;
+    std::fill( std::begin(vFill), std::end(vFill), 0 ) ;
+    // vは{0,0,0,0,0}
+    
+    
+    std::vector<int> vGenerate = {1,2,3,4,5} ;
+    auto gen_zero = [](){ return 0 ; } ;
+    std::generate( std::begin(vGenerate), std::end(vGenerate), gen_zero ) ;
+    // vは{0,0,0,0,0}
+    
+    
+    
+    // 偶数の場合true、奇数の場合falseを返す関数
+    auto is_even = []( auto x ) { return x%2 == 0 ; } ;
+
+    std::vector vRemoveif = { 1,2,3,4,5,6,7,8,9 } ;
+    // 偶数を取り除く
+    auto lastvRemoveif = std::remove_if( std::begin(vRemoveif), std::end(vRemoveif), is_even ) ;
+
+    // [ std::begin(v), last)は{1,3,5,7,9}
+    
+    
     cout << "std_algorithm=====================================END" << endl;
 }

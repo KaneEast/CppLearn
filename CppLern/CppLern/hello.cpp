@@ -19,6 +19,8 @@ extern void input_redirect();
 extern void recursion_test();
 extern void vector_test();
 extern void std_algorithm();
+extern void struct_test();
+extern void operator_overloading_test();
 
 
 #define TESTinput_redirect 0
@@ -32,7 +34,9 @@ int main(int argc, const char * argv[]) {
 //    lammda_test();
 //    recursion_test();
 //    vector_test();
-    std_algorithm();
+//    std_algorithm();
+//    struct_test();
+    operator_overloading_test();
 #else
     input_redirect();
 #endif
