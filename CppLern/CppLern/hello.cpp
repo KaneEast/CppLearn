@@ -17,7 +17,8 @@ extern void lammda_test();
 extern void standardInput_test();
 extern void input_redirect();
 extern void recursion_test();
-
+extern void vector_test();
+extern void std_algorithm();
 
 
 #define TESTinput_redirect 0
@@ -25,15 +26,21 @@ extern void recursion_test();
 int main(int argc, const char * argv[]) {
     
 #if !TESTinput_redirect
-    lammda_test();
-//    standardInput_test();
-    recursion_test();
+    //    standardInput_test();
+    
+    
+//    lammda_test();
+//    recursion_test();
+//    vector_test();
+    std_algorithm();
 #else
     input_redirect();
 #endif
     
     
-    cout << __cplusplus << endl;
+    
+    // コンパイラのバージョンを確認
+    cout << "cplusplus compiler version is: " <<  __cplusplus << endl;
     
     return 0;
 }

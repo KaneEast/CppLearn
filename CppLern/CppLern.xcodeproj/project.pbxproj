@@ -13,6 +13,8 @@
 		CEA2294324727FF300811032 /* standardInput_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA2294224727FF300811032 /* standardInput_test.cpp */; };
 		CEA229452472829400811032 /* input_redirect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA229442472829400811032 /* input_redirect.cpp */; };
 		CEA229492472904A00811032 /* recursion_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA229482472904A00811032 /* recursion_test.cpp */; };
+		CEBC0F1E2473CC340017D648 /* vector_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEBC0F1D2473CC340017D648 /* vector_test.cpp */; };
+		CEBC0F202473D50A0017D648 /* std_algorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEBC0F1F2473D50A0017D648 /* std_algorithm.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,8 @@
 		CEA229442472829400811032 /* input_redirect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = input_redirect.cpp; sourceTree = "<group>"; };
 		CEA22947247287F200811032 /* bodymass.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bodymass.txt; sourceTree = "<group>"; };
 		CEA229482472904A00811032 /* recursion_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = recursion_test.cpp; sourceTree = "<group>"; };
+		CEBC0F1D2473CC340017D648 /* vector_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = vector_test.cpp; sourceTree = "<group>"; };
+		CEBC0F1F2473D50A0017D648 /* std_algorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = std_algorithm.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				CEA2294224727FF300811032 /* standardInput_test.cpp */,
 				CEA229442472829400811032 /* input_redirect.cpp */,
 				CEA229482472904A00811032 /* recursion_test.cpp */,
+				CEBC0F1D2473CC340017D648 /* vector_test.cpp */,
+				CEBC0F1F2473D50A0017D648 /* std_algorithm.cpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -148,8 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBC0F1E2473CC340017D648 /* vector_test.cpp in Sources */,
 				CEA229492472904A00811032 /* recursion_test.cpp in Sources */,
 				CEA229452472829400811032 /* input_redirect.cpp in Sources */,
+				CEBC0F202473D50A0017D648 /* std_algorithm.cpp in Sources */,
 				CEA2293D2472797000811032 /* Makefile in Sources */,
 				CEA2293424726B1900811032 /* hello.cpp in Sources */,
 				CEA2294024727D2000811032 /* lamda_test.cpp in Sources */,
