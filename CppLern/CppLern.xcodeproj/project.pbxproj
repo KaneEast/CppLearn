@@ -80,12 +80,12 @@
 		CEA2293224726B1900811032 /* CppLern */ = {
 			isa = PBXGroup;
 			children = (
-				CEA22947247287F200811032 /* bodymass.txt */,
 				CEA2294124727DC000811032 /* Tests */,
 				CEA2293324726B1900811032 /* hello.cpp */,
 				CEA2293A24726D1D00811032 /* hellocpp.md */,
 				CEA2293B24726F9A00811032 /* all.h */,
 				CEA2293C2472797000811032 /* Makefile */,
+				CEA22947247287F200811032 /* bodymass.txt */,
 			);
 			path = CppLern;
 			sourceTree = "<group>";

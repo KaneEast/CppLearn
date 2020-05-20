@@ -7,7 +7,7 @@
 //
 
 
-// GCCを使って先ほどのhello.cppをコンパイルするには以下のようにする。
+// GCCを使ってhello.cppをコンパイルするには以下のようにする。
 // $ g++ -o hello hello.cpp
 
 #include <iostream>
@@ -22,24 +22,32 @@ extern void std_algorithm();
 extern void struct_test();
 extern void operator_overloading_test();
 
-
-#define TESTinput_redirect 0
-
 int main(int argc, const char * argv[]) {
     
-#if !TESTinput_redirect
-    //    standardInput_test();
+    // 1
+    // standardInput_test();
     
+    // 2
+    // lammda_test();
     
-//    lammda_test();
-//    recursion_test();
-//    vector_test();
-//    std_algorithm();
-//    struct_test();
+    // 3
+    // recursion_test();
+    
+    // 4
+    // vector_test();
+    
+    // 5
+    //    std_algorithm();
+    
+    // 6
+    //    struct_test();
+
+    // 7
     operator_overloading_test();
-#else
-    input_redirect();
-#endif
+    
+    // 8
+    // input_redirect();
+
     
     
     
