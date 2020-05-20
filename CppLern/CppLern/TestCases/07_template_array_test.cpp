@@ -1,11 +1,3 @@
-//
-//  template_test.cpp
-//  CppLern
-//
-//  Created by USER on 2020/05/20.
-//  Copyright © 2020 USER. All rights reserved.
-//
-
 #include "all.h"
 using namespace std;
 
@@ -68,6 +60,19 @@ namespace kg
         {
             ++i;
             return *this;
+        }
+        
+        array_iterator & operator += ( std::size_t n )
+        {
+            i += n ;
+            return *this ;
+        }
+
+        array_iterator operator + ( std::size_t n ) const
+        {
+            auto copy = *this ;
+            copy += n ;
+            return copy ;
         }
     };
 

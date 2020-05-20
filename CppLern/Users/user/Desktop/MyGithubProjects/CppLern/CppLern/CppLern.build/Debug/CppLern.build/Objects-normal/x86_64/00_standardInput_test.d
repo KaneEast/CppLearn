@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/user/Desktop/MyGithubProjects/CppLern/CppLern/CppLern/Tests/00_standardInput_test.cpp
+  /Users/user/Desktop/MyGithubProjects/CppLern/CppLern/CppLern/TestCases/00_standardInput_test.cpp

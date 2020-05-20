@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/user/Desktop/MyGithubProjects/CppLern/CppLern/CppLern/Tests/01_lamda_test.cpp
+  /Users/user/Desktop/MyGithubProjects/CppLern/CppLern/CppLern/TestCases/01_lamda_test.cpp
