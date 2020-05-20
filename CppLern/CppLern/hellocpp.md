@@ -46,13 +46,16 @@ time g++ -std=c++17 -Wall --pedantic-errors -include all.h -o program hello.cpp
 
 ```shell
 $ ls
-all.h main.cpp
+all.h hello.cpp
 $ g++ -std=c++17 -Wall --pedantic-errors -x c++-header -o all.h.gch all.h
 $ ls
-all.h all.h.gch main.cpp
-$ time g++ -std=c++17 -Wall --pedantic-errors -include all.h -o program main.cpp
+all.h all.h.gch hello.cpp
+$ time g++ -std=c++17 -Wall --pedantic-errors -include all.h -o program hello.cpp
 ```
 
 
-#### リダイレクト
-./program > hello.txt
+#### 出力リダイレクト
+./hello > output.txt
+
+#### 入力リダイレクト
+./hello < input.txt

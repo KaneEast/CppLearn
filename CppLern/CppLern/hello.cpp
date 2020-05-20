@@ -13,40 +13,26 @@
 #include <iostream>
 using namespace std;
 
-extern void lammda_test();
-extern void standardInput_test();
 extern void input_redirect();
-extern void recursion_test();
-extern void vector_test();
-extern void std_algorithm();
-extern void struct_test();
-extern void operator_overloading_test();
+extern void step00_standardInput_test();
+extern void step01_lammda_test();
+extern void step02_recursion_test();
+extern void step03_vector_test();
+extern void step04_std_algorithm();
+extern void step05_struct_test();
+extern void step06_operator_overloading_test();
+extern void step07_template_array_test();
 
 int main(int argc, const char * argv[]) {
     
-    // 1
-    // standardInput_test();
-    
-    // 2
-    // lammda_test();
-    
-    // 3
-    // recursion_test();
-    
-    // 4
-    // vector_test();
-    
-    // 5
-    //    std_algorithm();
-    
-    // 6
-    //    struct_test();
-
-    // 7
-    operator_overloading_test();
-    
-    // 8
-    // input_redirect();
+    step00_standardInput_test(); // 標準入力テスト
+    step01_lammda_test(); // ラムダテスト
+    step02_recursion_test(); // 再帰関数テスト
+    step03_vector_test(); // Vectorテスト
+    step04_std_algorithm(); // std algorithmのテスト
+    step05_struct_test(); // 構造体テスト
+    step06_operator_overloading_test(); // オペレーター　オーバーロード　テスト
+    step07_template_array_test(); // テンプレート 配列 テスト
 
     
     
