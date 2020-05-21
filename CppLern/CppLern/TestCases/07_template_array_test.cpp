@@ -12,14 +12,14 @@ T twice(T n)
 }
 
 template <typename T>
-void f(T const & x)
+void tType(T const & x)
 {
     std::cout << x;
 }
 
 
 template <int N>
-void fi()
+void tValue()
 {
     std::cout << N;
 }
@@ -133,26 +133,32 @@ namespace kg
 void step07_template_array_test()
 {
     cout << twice(123) << endl;  // int
-    cout << twice(1.23) << endl; // double
+    cout << twice<double>(1.23) << endl; // double
+    cout << twice<int>(1.23) << endl; // int -> double
     
     
     // Tはint
-    f(0);
+    tType(0);
+    tType<int>(0);
+    
     // Tはdouble
-    f(0.0);
+    tType(0.0);
+    tType<double>(0.0);
+    
     // Tはstd::string
-    f("hello"s);
+    tType("hello"s);
+    tType<std::string>("hello"s);
     
     // Tはdouble
     // int型0からdouble型0.0への変換が行われる
-    f<double>(0);
+    tType<double>(0);
     
     
     
     // Nは0
-    fi<0>();
+    tValue<0>();
     // Nは123
-    fi<123>();
+    tValue<123>();
     
     
     

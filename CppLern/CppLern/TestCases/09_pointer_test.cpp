@@ -203,14 +203,14 @@ namespace pointertest {
 
 void step09_pointer_test()
 {
-//    pointertest::test5();
     pointertest::test8();
     
-    int data[3] = {0,1,2} ;
     
-    // C++ 20 tests
-    pointertest::print_raw_address( &data[0] ) ;
-    pointertest::print_raw_address( &data[1] ) ;
-    pointertest::print_raw_address( &data[2] ) ;
+    
+//    // C++ 20 tests
+//    int data[3] = {0,1,2} ;
+//    pointertest::print_raw_address( &data[0] ) ;
+//    pointertest::print_raw_address( &data[1] ) ;
+//    pointertest::print_raw_address( &data[2] ) ;
     
 }

@@ -23,6 +23,8 @@ void step03_vector_test()
     {
         std::cout << v.at(i) << "\n"s ;
     }
+    
+    output_all(std::begin(v), std::end(v));
 }
 
 

@@ -132,94 +132,124 @@ void step04_std_algorithm()
     
     
     
-    bool bb = std::all_of( std::begin(v), std::end(v), [](auto value){
-        // 特に意味のない関数
-        return value > 0;
-    });
-    cout << bb << endl;
-    
-    
-    bool has_3 = std::any_of( std::begin(v), std::end(v), []( auto x ) {
-        return x == 3;
-    });
-    cout << has_3 << endl;
-    
-    
-    // 3を指すイテレーター
-    auto pos = std::find( std::begin(v), std::end(v), 3 ) ;
-
-    std::cout << *pos ;
-    
-    
-    
-    
-    // [=]を使うことで、関数の外側の値をコピーして使うことができる。
-
-    int value = 123 ;
-
-    auto f = [=]{ return value ; } ;
-
-    cout << f() ; // 123
-    
-    
-    // [&]を使うことで、関数の外側の値をリファレンスで使うことができる。
-
-    auto fRef = [&]{ ++value ; } ;
-    fRef() ;
-    std::cout << value ; // 124
-    
-    
-    
-    std::vector<int> a = {1,2,3,4,5} ;
-    // aと等しい
-    std::vector<int> b = {1,2,3,4,5} ;
-    // aと等しくない
-    std::vector<int> c = {1,2,3,4,5,6} ;
-    // aと等しくない
-    std::vector<int> d = {1,2,2,4,6} ;
-
-    // true
-    bool ab = std::equal(
-        std::begin(a), std::end(a),
-        std::begin(b), std::end(b) ) ;
-
-    // false
-    bool ac = std::equal(
-        std::begin(a), std::end(a),
-        std::begin(c), std::end(c) ) ;
-
-    // false
-    bool ad = std::equal(
-        std::begin(a), std::end(a),
-        std::begin(d), std::end(d) ) ;
-    
-    
-    // 最初の要素
-    auto first = std::begin(v) ;
-    // 最後の1つ次の要素
-    auto last = std::end(v) ;
-
-    // 要素数: 5
-    auto size = std::distance( first, last ) ;
-    
-    // 4
-    auto size_from_next = std::distance( first + 1, last ) ;
-    
-    
-    
-    std::vector<double> vv = {1.3, 2.2, 3.0, 4.9, 5.7} ;
-    std::vector<double> w = {1.9, 2.4, 3.8, 4.5, 5.0} ;
-    
-    // 小数点以下は誤差として切り捨てる比較
-    auto comp = []( auto a, auto b )
     {
-        return std::floor(a) == std::floor(b) ;
-    } ;
+        bool b = std::all_of( std::begin(v), std::end(v), [](auto value){
+            // 特に意味のない関数
+            return value > 0;
+        });
+        cout << b << endl;
+        
+        bool has_3 = std::any_of( std::begin(v), std::end(v), []( auto x ) {
+            return x == 3;
+        });
+        cout << has_3 << endl;
+        
+        // 3を指すイテレーター
+        auto pos = std::find( std::begin(v), std::end(v), 3 ) ;
+
+        std::cout << *pos ;
+    }
     
-    bool bbb = std::equal(
-    std::begin(vv), std::end(vv),
-    std::begin(w), std::end(w),
-    comp ) ;
+    
+    
+    {
+        // [=]を使うことで、関数の外側の値をコピーして使うことができる。
+
+        int value = 123 ;
+
+        auto f = [=]{ return value ; } ;
+
+        cout << f() ; // 123
+        
+        
+        // [&]を使うことで、関数の外側の値をリファレンスで使うことができる。
+
+        auto fRef = [&]{ ++value ; } ;
+        fRef() ;
+        std::cout << value ; // 124
+    }
+    
+    
+    
+    
+    {
+        std::vector<int> a = {1,2,3,4,5} ;
+        // aと等しい
+        std::vector<int> b = {1,2,3,4,5} ;
+        // aと等しくない
+        std::vector<int> c = {1,2,3,4,5,6} ;
+        // aと等しくない
+        std::vector<int> d = {1,2,2,4,6} ;
+
+        // true
+        bool ab = std::equal(
+            std::begin(a), std::end(a),
+            std::begin(b), std::end(b) ) ;
+        
+        cout << ab << endl;
+
+        // false
+        bool ac = std::equal(
+            std::begin(a), std::end(a),
+            std::begin(c), std::end(c) ) ;
+        
+        cout << ac << endl;
+
+        // false
+        bool ad = std::equal(
+            std::begin(a), std::end(a),
+            std::begin(d), std::end(d) ) ;
+        
+        cout << ad << endl;
+    }
+    
+    
+    {
+        // 最初の要素
+        auto first = std::begin(v) ;
+        // 最後の1つ次の要素
+        auto last = std::end(v) ;
+
+        // 要素数: 5
+        auto size = std::distance( first, last ) ;
+        cout << v.size() << endl;
+        cout << size << endl;
+        
+        // 4
+        auto size_from_next = std::distance( first + 1, last ) ;
+        cout << size_from_next << endl;
+    }
+    
+    
+    {
+        std::vector<double> v = {1.3, 2.2, 3.0, 4.9, 5.7} ;
+        std::vector<double> w = {1.9, 2.4, 3.8, 4.5, 5.0} ;
+        
+        // 小数点以下は誤差として切り捨てる比較
+        auto comp = []( auto a, auto b )
+        {
+            return std::floor(a) == std::floor(b) ;
+        } ;
+        
+        
+        bool b = std::equal(
+        std::begin(v), std::end(v),
+        std::begin(w), std::end(w),
+        comp ) ;
+        cout << b << endl;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     // search( first1, last1, first2, last2)はイテレーター[first2, last2)の範囲で示された連続した要素の並びがイテレーター
@@ -277,8 +307,28 @@ void step04_std_algorithm()
     auto is_even = []( auto x ) { return x%2 == 0 ; } ;
 
     std::vector vRemoveif = { 1,2,3,4,5,6,7,8,9 } ;
+    
+    
+    cout << kg::any_of(std::begin(v), std::end(v), is_even) << endl;
+    cout << kg::all_of(std::begin(v), std::end(v), is_even) << endl;
+    
+    
+    auto put = []( auto x ) { cout << x; };
+    kg::for_each(std::begin(vRemoveif), std::end(vRemoveif), put);
+    
+    
+    // TODO:K problem 32767
+    auto larger10 = []( auto x ) { return x > 10; };
+    cout << kg::none_of(std::begin(vRemoveif), std::end(vRemoveif), larger10) << endl;
+    
+    
+    
+    
     // 偶数を取り除く
     auto lastvRemoveif = std::remove_if( std::begin(vRemoveif), std::end(vRemoveif), is_even ) ;
-
+    cout << *lastvRemoveif << endl;
     // [ std::begin(v), last)は{1,3,5,7,9}
+    
+    
+    
 }
