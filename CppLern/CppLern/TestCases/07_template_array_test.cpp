@@ -28,6 +28,7 @@ template <std::size_t N>
 void fBuffer()
 {
     int buffer[N];
+    cout << sizeof(buffer) / sizeof(int);
 }
 
 

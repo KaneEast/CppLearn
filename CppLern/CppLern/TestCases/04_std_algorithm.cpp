@@ -38,7 +38,7 @@ namespace kg {
     // すべての要素が条件を満たさない判定に使える。
     auto none_of = []( auto first, auto last, auto pred )
     {
-        for ( auto iter = first ; first != last ; ++iter )
+        for ( auto iter = first ; iter != last ; ++iter )
         {
             if ( pred(*iter) )
                 return false ;
@@ -316,13 +316,14 @@ void step04_std_algorithm()
     auto put = []( auto x ) { cout << x; };
     kg::for_each(std::begin(vRemoveif), std::end(vRemoveif), put);
     
-    
-    // TODO:K problem 32767
     auto larger10 = []( auto x ) { return x > 10; };
     cout << kg::none_of(std::begin(vRemoveif), std::end(vRemoveif), larger10) << endl;
     
     
-    
+    cout << *kg::find(std::begin(vRemoveif), std::end(vRemoveif), 5) << endl;
+    cout << (kg::find_if(std::begin(vRemoveif), std::end(vRemoveif), larger10) == std::end(vRemoveif)) << endl;
+    cout << kg::count(std::begin(vRemoveif), std::end(vRemoveif), 5) << endl;
+    cout << kg::count_if(std::begin(vRemoveif), std::end(vRemoveif), larger10) << endl;
     
     // 偶数を取り除く
     auto lastvRemoveif = std::remove_if( std::begin(vRemoveif), std::end(vRemoveif), is_even ) ;

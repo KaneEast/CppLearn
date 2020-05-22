@@ -16,6 +16,7 @@ namespace string_test {
      二重引用符 \"
      */
 
+    #pragma GCC diagnostic ignored "-Wunused"
     const char s4[4] = {'a', 'b', 'c', '\0'} ;
     const char s6[6] = {'h', 'e', 'l', 'l', 'o', '\0' } ;
 

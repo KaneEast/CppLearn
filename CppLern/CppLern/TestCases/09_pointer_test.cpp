@@ -13,7 +13,10 @@ namespace pointertest {
         // std::cout << *pointer ; // couse error
 
         // 未定義の挙動
-        *pointer = 123 ;
+        
+        // disable warning for: [Variable 'pointer' is uninitialized when used here]
+        #pragma GCC diagnostic ignored "-Wuninitialized"
+        *pointer = 123 ; // Variable 'pointer' is uninitialized when used here
     }
 
     void test2()
@@ -113,6 +116,7 @@ namespace pointertest {
 
         // 変数ptrの宣言
         // int (int)へのポインター
+        #pragma GCC diagnostic ignored "-Wunused"
         int (*ptr)(int) = &f ;
         
         
@@ -126,6 +130,9 @@ namespace pointertest {
         using pointer_to_array_type = int (*)[5] ;
         
         int a[5] ;
+        
+//        #pragma GCC diagnostic ignored "-Wunused-result"
+        #pragma GCC diagnostic ignored "-Wunused"
         pointer_to_array_type ptr = &a ;
         
         // エイリアス宣言を使わない変数の宣言は以下のようになる。
